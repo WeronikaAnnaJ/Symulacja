@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #3c3c3c;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Zadanie2Controller">
+   <children>
+      <TextField layoutX="53.0" layoutY="289.0" fx:id="xpTextField" />
+      <TextField layoutX="57.0" layoutY="367.0" fx:id="xkTextField" />
+      <TextField fx:id="nTextField" layoutX="53.0" layoutY="457.0" />
+      <ComboBox fx:id="funkcjaComboBox" layoutX="52.0" layoutY="195.0" prefHeight="26.0" prefWidth="209.0" />
+      <Button fx:id="metodaProstokatowButton" layoutX="327.0" layoutY="215.0" mnemonicParsing="false" onAction="#obliczMetodaProctokatow" prefHeight="26.0" prefWidth="182.0" text="Oblicz metodą prostokątów" />
+      <Button fx:id="metodaTrapezowButton" layoutX="327.0" layoutY="315.0" mnemonicParsing="false" onAction="#obliczMetodaTrapezow" prefHeight="26.0" prefWidth="182.0" text="Oblicz metodą trapezów" />
+      <Button fx:id="metodaParaoliButton" layoutX="327.0" layoutY="427.0" mnemonicParsing="false" onAction="#obliczMetodaParaboli" prefHeight="26.0" prefWidth="182.0" text="Oblicz metodą parabol" />
+      <Label fx:id="metodaProstokatowLabel" alignment="CENTER" layoutX="326.0" layoutY="256.0" prefHeight="38.0" prefWidth="405.0" style="-fx-background-color: #FFFFFF;" text="Wynik metodą prostokątów">
+         <font>
+            <Font name="System Italic" size="12.0" />
+         </font></Label>
+      <Label fx:id="metodaTrapezowLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="326.0" layoutY="357.0" prefHeight="38.0" prefWidth="406.0" style="-fx-background-color: #FFFFFF;" text="Wynik metodą tapezów">
+         <font>
+            <Font name="System Italic" size="12.0" />
+         </font></Label>
+      <Label layoutX="85.0" layoutY="40.0" text="ZADANIE 2" textFill="WHITE">
+         <font>
+            <Font size="19.0" />
+         </font></Label>
+      <Label layoutX="34.0" layoutY="76.0" prefHeight="78.0" prefWidth="568.0" text="Numeryczne metody całkowania: metoda prostokątów, metoda trapezów, metoda parabol" textFill="WHITE" />
+      <Label layoutX="69.0" layoutY="163.0" text="Wybierz funkcję" textFill="WHITE" />
+      <Label layoutX="57.0" layoutY="258.0" text="Początek przedziału " textFill="WHITE" />
+      <Label layoutX="64.0" layoutY="339.0" text="Koniec przedziału" textFill="WHITE" />
+      <Label layoutX="52.0" layoutY="413.0" prefHeight="53.0" prefWidth="138.0" text="Określenie dokładności (liczba całkowita)" textFill="WHITE" wrapText="true" />
+      <Button layoutX="49.0" layoutY="533.0" mnemonicParsing="false" onAction="#Cofnij" prefHeight="38.0" prefWidth="123.0" text="&lt; Powrót do zadań" />
+      <Label fx:id="metodaParaboliLabel" alignment="CENTER" layoutX="326.0" layoutY="470.0" prefHeight="38.0" prefWidth="406.0" style="-fx-background-color: #FFFFFF;" text="Wynik metodą parabol" textAlignment="CENTER" />
+      <Button layoutX="326.0" layoutY="533.0" mnemonicParsing="false" onAction="#WyswietlSciage" prefHeight="38.0" prefWidth="131.0" text="Wyświetl ściągę" />
+   </children>
+</AnchorPane>

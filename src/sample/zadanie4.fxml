@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.canvas.Canvas?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="575.0" prefWidth="738.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Zadanie4Controller">
+   <left>
+      <AnchorPane prefHeight="575.0" prefWidth="292.0" style="-fx-background-color: #3c3c3c;" BorderPane.alignment="CENTER">
+         <children>
+            <TextField fx:id="rozmiarTextField" layoutX="43.0" layoutY="189.0" prefHeight="26.0" prefWidth="119.0" />
+            <TextField fx:id="epokiTextField" layoutX="42.0" layoutY="395.0" prefHeight="26.0" prefWidth="121.0" />
+            <Button fx:id="rozpoczecieButton" layoutX="40.0" layoutY="252.0" mnemonicParsing="false" onAction="#startGame" prefHeight="18.0" prefWidth="220.0" text="Utwórz plansze" />
+            <Button fx:id="nastepnaEpokaButton" layoutX="42.0" layoutY="296.0" mnemonicParsing="false" onAction="#przeprowadzEpoke" prefHeight="27.0" prefWidth="219.0" text="Przeprowadź epokę" />
+            <Label layoutX="52.0" layoutY="163.0" text="Rozmiar" textFill="WHITE" />
+            <Label layoutX="45.0" layoutY="366.0" text="Skok o liczbę epok" textFill="WHITE" />
+            <Button fx:id="rozpoczecieButton" layoutX="42.0" layoutY="442.0" mnemonicParsing="false" onAction="#rozpocznijEpoki" prefHeight="26.0" prefWidth="213.0" text="Przeskocz epoki" />
+            <Label layoutX="56.0" layoutY="45.0" text="ZADANIE 4" textFill="WHITE">
+               <font>
+                  <Font size="19.0" />
+               </font></Label>
+            <Label layoutX="52.0" layoutY="93.0" text="Własna wersja Gry w życie" textFill="WHITE" />
+            <Button layoutX="34.0" layoutY="516.0" mnemonicParsing="false" onAction="#Cofnij" prefHeight="35.0" prefWidth="128.0" text="&lt;  Powrót do zadań" />
+         </children>
+      </AnchorPane>
+   </left>
+   <center>
+      <AnchorPane prefHeight="575.0" prefWidth="467.0" style="-fx-background-color: #000000;" BorderPane.alignment="CENTER">
+         <children>
+            <Canvas fx:id="canvas" height="400.0" layoutX="23.0" layoutY="88.0" width="400.0" />
+            <ButtonBar layoutX="14.0" layoutY="159.0" prefHeight="40.0" prefWidth="200.0" />
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>

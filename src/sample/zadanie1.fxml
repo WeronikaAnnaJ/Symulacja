@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #3c3c3c;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Zadanie1Controller">
+   <children>
+      <ComboBox fx:id="functionComboBox" layoutX="68.0" layoutY="187.0" prefHeight="26.0" prefWidth="238.0" />
+      <TextField fx:id="aTextField" layoutX="68.0" layoutY="263.0" prefHeight="26.0" prefWidth="106.0" />
+      <TextField fx:id="bTextField" layoutX="66.0" layoutY="351.0" prefHeight="26.0" prefWidth="106.0" />
+      <TextField fx:id="epsilonTextField" layoutX="67.0" layoutY="429.0" prefHeight="26.0" prefWidth="106.0" />
+      <Button fx:id="metodaBisekcjiButton" layoutX="432.0" layoutY="191.0" mnemonicParsing="false" onAction="#setMetodaBisekcjiButton" prefHeight="26.0" prefWidth="194.0" text="Oblicz metodą bisekcji" />
+      <Button fx:id="regulaFalskiButton" layoutX="432.0" layoutY="455.0" mnemonicParsing="false" onAction="#setRegulaFalsiButton" prefHeight="26.0" prefWidth="194.0" text="Oblicz metodą reguła falsi" />
+      <Button fx:id="metodaSieczychButton" layoutX="432.0" layoutY="328.0" mnemonicParsing="false" onAction="#setMetodaSieczychButtonn" prefHeight="26.0" prefWidth="194.0" text="Oblicz metodą siecznych" />
+      <Label fx:id="metodaBisekcjiLabel" alignment="CENTER" layoutX="431.0" layoutY="229.0" prefHeight="52.0" prefWidth="238.0" style="-fx-background-color: #ffffff;" text="Wynik metodą bisekcji">
+         <font>
+            <Font name="System Italic" size="12.0" />
+         </font></Label>
+      <Label fx:id="regulaFalsiLabel" alignment="CENTER" layoutX="431.0" layoutY="490.0" prefHeight="52.0" prefWidth="238.0" style="-fx-background-color: #ffffff;" text="Wynik metodą reguła falsi">
+         <font>
+            <Font name="System Italic" size="12.0" />
+         </font></Label>
+      <Label fx:id="metodaSiecznychLabel" alignment="CENTER" layoutX="432.0" layoutY="364.0" prefHeight="52.0" prefWidth="237.0" style="-fx-background-color: #ffffff;" text="Wynik metodą siecznych">
+         <font>
+            <Font name="System Italic" size="12.0" />
+         </font></Label>
+      <Label layoutX="75.0" layoutY="38.0" prefHeight="28.0" prefWidth="194.0" text="ZADANIE 1" textFill="WHITE">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Label>
+      <Label fx:id="trescZadaniaLabel" layoutX="52.0" layoutY="66.0" prefHeight="90.0" prefWidth="694.0" text="Znajdź pierwiastek równiania nieliniowego trzeba metodami: metodą bisekcji, metodą reguła falsi, metodą siecznych" textFill="#fffdfd" wrapText="true" />
+      <Label layoutX="72.0" layoutY="156.0" text="Wybierz równianie" textFill="WHITE" />
+      <Label layoutX="75.0" layoutY="237.0" text="Początek przedziału" textFill="WHITE" />
+      <Label layoutX="73.0" layoutY="319.0" text="Koniec przedziału" textFill="#fffbfb" />
+      <Label layoutX="85.0" layoutY="407.0" text="Epsilon" textFill="WHITE" />
+      <Button fx:id="Cofnij" layoutX="54.0" layoutY="534.0" mnemonicParsing="false" onAction="#Cofnij" prefHeight="34.0" prefWidth="133.0" text="&lt;  Powrót do zadań" />
+   </children>
+</AnchorPane>

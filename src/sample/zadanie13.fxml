@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #3c3c3c;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Zadanie13Controller">
+   <children>
+      <HBox layoutX="79.0" layoutY="268.0" prefHeight="229.0" prefWidth="641.0">
+         <children>
+            <SplitPane prefHeight="234.0" prefWidth="220.0">
+               <items>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <Label fx:id="gra1OrzelLabel" layoutX="86.0" layoutY="30.0" text="Orzeł" />
+                        <BarChart fx:id="gra1Chart" layoutX="20.0" layoutY="85.0" prefHeight="150.0" prefWidth="152.0">
+                          <xAxis>
+                            <CategoryAxis side="BOTTOM" />
+                          </xAxis>
+                          <yAxis>
+                            <NumberAxis side="LEFT" />
+                          </yAxis>
+                        </BarChart>
+                        <Label fx:id="gra1ReszkaLabel" layoutX="82.0" layoutY="48.0" text="Reszka" />
+                     </children>
+                  </AnchorPane>
+               </items>
+            </SplitPane>
+            <SplitPane prefHeight="230.0" prefWidth="202.0">
+               <items>
+                  <AnchorPane prefHeight="242.0" prefWidth="199.0">
+                     <children>
+                        <Label fx:id="gra2OrzelLabel" layoutX="78.0" layoutY="29.0" text="Orzeł" />
+                        <BarChart fx:id="gra2Chart" layoutY="94.0" prefHeight="134.0" prefWidth="200.0">
+                           <xAxis>
+                              <CategoryAxis side="BOTTOM" />
+                           </xAxis>
+                           <yAxis>
+                              <NumberAxis side="LEFT" />
+                           </yAxis>
+                        </BarChart>
+                        <Label fx:id="gra2ReszkaLabel" layoutX="74.0" layoutY="47.0" text="Reszka" />
+                     </children>
+                  </AnchorPane>
+               </items>
+            </SplitPane>
+            <SplitPane prefHeight="218.0" prefWidth="184.0">
+               <items>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <Label fx:id="gra3OrzelLabel" layoutX="84.0" layoutY="26.0" text="Orzeł" />
+                        <BarChart fx:id="gra3Chart" layoutX="14.0" layoutY="95.0" prefHeight="139.0" prefWidth="175.0">
+                           <xAxis>
+                              <CategoryAxis side="BOTTOM" />
+                           </xAxis>
+                           <yAxis>
+                              <NumberAxis side="LEFT" />
+                           </yAxis>
+                        </BarChart>
+                        <Label fx:id="gra3ReszkaLabel" layoutX="80.0" layoutY="44.0" text="Reszka" />
+                     </children>
+                  </AnchorPane>
+               </items>
+            </SplitPane>
+         </children>
+      </HBox>
+      <TextField fx:id="iloscKolejekTextField" layoutX="79.0" layoutY="144.0" prefHeight="9.0" prefWidth="116.0" />
+      <TextField fx:id="gracze1TextField" layoutX="135.0" layoutY="228.0" prefHeight="15.0" prefWidth="100.0" />
+      <TextField fx:id="gracze2TextField" layoutX="339.0" layoutY="228.0" prefHeight="15.0" prefWidth="100.0" />
+      <TextField fx:id="gracze3TextField" layoutX="533.0" layoutY="228.0" prefHeight="15.0" prefWidth="100.0" />
+      <Button fx:id="losujButton" layoutX="313.0" layoutY="524.0" mnemonicParsing="false" onAction="#rozpocznijLosowanie" prefHeight="26.0" prefWidth="186.0" text="Losuj" />
+      <Button layoutX="49.0" layoutY="534.0" mnemonicParsing="false" onAction="#Cofnij" prefHeight="39.0" prefWidth="118.0" text="&lt; Powrót do zadań" />
+      <Label layoutX="80.0" layoutY="117.0" text="Wybierz ilość kolejek" textFill="WHITE" />
+      <Label layoutX="545.0" layoutY="196.0" prefHeight="26.0" prefWidth="113.0" text="liczba graczy " textFill="WHITE" />
+      <Label layoutX="346.0" layoutY="201.0" text="liczba graczy" textFill="WHITE" />
+      <Label layoutX="149.0" layoutY="201.0" text="liczba graczy " textFill="#fffdfd" />
+      <Label layoutX="149.0" layoutY="187.0" text="GRA 1" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="346.0" layoutY="188.0" text="GRA 2" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="545.0" layoutY="187.0" text="GRA 3" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="79.0" layoutY="39.0" text="ZADANIE 13" textFill="WHITE">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Label>
+      <Label layoutX="79.0" layoutY="82.0" prefHeight="7.0" prefWidth="669.0" text="Zmodyfikowaną grę w Orła i Reszkę" textFill="#fff6f6" />
+   </children>
+</AnchorPane>

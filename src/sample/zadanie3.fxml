@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.canvas.Canvas?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="700.0" prefWidth="900.0" style="-fx-background-color: #3c3c3c;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Zadanie3Controller">
+   <children>
+      <HBox layoutX="17.0" layoutY="73.0" prefHeight="558.0" prefWidth="906.0">
+         <children>
+            <SplitPane prefHeight="390.0" prefWidth="280.0">
+               <items>
+                  <AnchorPane prefHeight="510.0" prefWidth="284.0" style="-fx-background-color: #3c3c3c;">
+                     <children>
+                        <TextField layoutX="20.0" layoutY="240.0" prefHeight="26.0" prefWidth="106.0" fx:id="xpPoczatekTextField" />
+                        <TextField layoutX="26.0" layoutY="314.0" prefHeight="26.0" prefWidth="106.0" fx:id="xkKoniecTextField" />
+                        <TextField fx:id="dokadnoscTextField" layoutX="26.0" layoutY="394.0" prefHeight="18.0" prefWidth="106.0" />
+                        <Button fx:id="obliczPolePodWykresemButton" layoutX="25.0" layoutY="446.0" mnemonicParsing="false" onAction="#obliczPolePodWykresem" prefHeight="26.0" prefWidth="222.0" text="Oblicz pole" />
+                        <ComboBox fx:id="functionChoiceBox" layoutX="18.0" layoutY="155.0" prefHeight="26.0" prefWidth="222.0" />
+                        <Label fx:id="wynikFunkcjiLabel" alignment="CENTER" layoutX="26.0" layoutY="488.0" prefHeight="46.0" prefWidth="222.0" style="-fx-background-color: #ffffff;" text="Wynik">
+                           <font>
+                              <Font name="System Italic" size="12.0" />
+                           </font></Label>
+                        <Label layoutX="20.0" layoutY="364.0" text="Dokładność ( liczba całkowita)" textFill="#fffcfc" />
+                        <Label fx:id="o" layoutX="26.0" layoutY="286.0" text="Koniec przedziału" textFill="#fffbfb" />
+                        <Label layoutX="27.0" layoutY="211.0" text="Początek przedziału" textFill="#fffefe" />
+                        <Label layoutX="19.0" layoutY="128.0" text="Funkcja" textFill="#fffdfd" />
+                        <Label layoutX="8.0" layoutY="14.0" prefHeight="58.0" prefWidth="255.0" text="Oblicz pole powierzchni metodą Monte Carlo między osią współrzędnych 0x, a wykresem funkcji w określonym przedziale wartości" textFill="WHITE" wrapText="true" />
+                        <Button layoutX="179.0" layoutY="393.0" mnemonicParsing="false" onAction="#WyswietlSciage" prefHeight="26.0" prefWidth="70.0" text="Ściąga" />
+                     </children>
+                  </AnchorPane>
+               </items>
+            </SplitPane>
+            <SplitPane prefHeight="534.0" prefWidth="598.0">
+               <items>
+                  <AnchorPane prefHeight="558.0" prefWidth="603.0" style="-fx-background-color: #3c3c3c;">
+                     <children>
+                        <Canvas fx:id="canvas" height="400.0" layoutX="176.0" layoutY="79.0" width="400.0" />
+                        <Label layoutX="17.0" layoutY="22.0" prefHeight="26.0" prefWidth="392.0" text="Oblicz pole powierzchni dowolnych wielokątów metodą Monte Carlo" textFill="WHITE" />
+                        <Label layoutX="14.0" layoutY="96.0" prefHeight="18.0" prefWidth="162.0" text="Kolejne wierzchołki wielokąta" textFill="WHITE" />
+                        <TableView fx:id="tabela" layoutX="14.0" layoutY="227.0" prefHeight="194.0" prefWidth="126.0">
+                          <columns>
+                            <TableColumn prefWidth="62.40002155303955" text="x" fx:id="xKolumna" />
+                            <TableColumn fx:id="yKolumna" prefWidth="63.199951171875" text="y" />
+                          </columns>
+                        </TableView>
+                        <Label layoutX="37.0" layoutY="115.0" text="x" textFill="WHITE" />
+                        <Label layoutX="111.0" layoutY="115.0" text="y" textFill="WHITE" />
+                        <Button fx:id="dodajWierzcholekButton" layoutX="24.0" layoutY="180.0" mnemonicParsing="false" onAction="#dodajWierzcholek" text="Dodaj wierzchołek" />
+                        <TextField layoutX="11.0" layoutY="144.0" prefHeight="18.0" prefWidth="52.0" fx:id="xTextField" />
+                        <TextField fx:id="yTextField" layoutX="99.0" layoutY="144.0" prefHeight="18.0" prefWidth="52.0" />
+                        <Button fx:id="obliczPoleWieokatuButton" layoutX="14.0" layoutY="447.0" mnemonicParsing="false" onAction="#obliczPoleWielokatu" text="Oblicz pole wielokąta " />
+                        <Label fx:id="poleWielokatuLabel" alignment="CENTER" layoutX="17.0" layoutY="487.0" prefHeight="46.0" prefWidth="222.0" style="-fx-background-color: #ffffff;" text="Wynik">
+                           <font>
+                              <Font name="System Italic" size="12.0" />
+                           </font></Label>
+                        <Button fx:id="Resetuj" layoutX="394.0" layoutY="497.0" mnemonicParsing="false" onAction="#Resetuj" prefHeight="26.0" prefWidth="142.0" text="Wyczyść dane" />
+                     </children>
+                  </AnchorPane>
+               </items>
+            </SplitPane>
+         </children>
+      </HBox>
+      <Button fx:id="cofnijButton" layoutX="42.0" layoutY="639.0" mnemonicParsing="false" onAction="#Cofnij" prefHeight="34.0" prefWidth="133.0" text="&lt;  Powrót do zadań" />
+      <Label layoutX="68.0" layoutY="29.0" text="ZADANIE 3" textFill="WHITE">
+         <font>
+            <Font size="19.0" />
+         </font></Label>
+   </children>
+</AnchorPane>
